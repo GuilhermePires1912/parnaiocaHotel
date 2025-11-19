@@ -63,23 +63,26 @@ export const UsuariosPage = () => {
 
   return (
     <S.UsersContainer>
-      <div className="flex justify-between items-center mb-6">
-        <div onClick={() => toggleMenu()}>
+      <div className='flex justify-between items-center mb-6'>
+        <div
+          className='flex justify-between items-center mb-3 text-gray-600 text-sm'
+          onClick={() => toggleMenu()}
+        >
           Total de 5 funcionários cadastrados
         </div>
         <ButtonCreate />
       </div>
 
       <TableContainer component={Paper}>
-        <S.TablelaDeUsuarios aria-label="Tabela de Usuários">
+        <S.TablelaDeUsuarios aria-label='Tabela de Usuários'>
           <TableHead>
             <TableRow>
               <TableCell>Nome</TableCell>
-              <TableCell align="right">E-mail</TableCell>
-              <TableCell align="right">Permissão</TableCell>
-              <TableCell align="right">Status</TableCell>
-              <TableCell align="right">Último Login</TableCell>
-              <TableCell align="center" colSpan={2}>
+              <TableCell align='right'>E-mail</TableCell>
+              <TableCell align='right'>Permissão</TableCell>
+              <TableCell align='right'>Status</TableCell>
+              <TableCell align='right'>Último Login</TableCell>
+              <TableCell align='center' colSpan={2}>
                 Ações
               </TableCell>
             </TableRow>
@@ -87,19 +90,19 @@ export const UsuariosPage = () => {
           <TableBody>
             {users.map((user) => (
               <TableRow key={user.id}>
-                <TableCell component="th" scope="row">
+                <TableCell component='th' scope='row'>
                   {user.name}
                 </TableCell>
-                <TableCell align="right">{user.email}</TableCell>
-                <TableCell align="right">
+                <TableCell align='right'>{user.email}</TableCell>
+                <TableCell align='right'>
                   {user.isAdmin ? 'Administrador' : 'Funcionário'}
                 </TableCell>
-                <TableCell align="right">
+                <TableCell align='right'>
                   {user.isActive ? 'Ativo' : 'Inativo'}
                 </TableCell>
-                <TableCell align="right">{user.lastLogin}</TableCell>
-                <TableCell align="right">Edita</TableCell>
-                <TableCell align="right">Remover</TableCell>
+                <TableCell align='right'>{user.lastLogin}</TableCell>
+                <TableCell align='right'>Edita</TableCell>
+                <TableCell align='right'>Remover</TableCell>
               </TableRow>
             ))}
           </TableBody>

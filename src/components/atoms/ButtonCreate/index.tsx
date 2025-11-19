@@ -2,7 +2,7 @@ const ButtonCreate = () => {
   return (
     <button
       style={{ fontFamily: 'sans-serif' }}
-      className='bg-black text-white p-0.5 text-sm border rounded-l'
+      className='bg-black text-white p-2 text-sm border rounded-xl'
     >
       + Cadastrar Novo Quarto
     </button>
