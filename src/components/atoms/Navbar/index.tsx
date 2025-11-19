@@ -25,7 +25,7 @@ const Navbar = ({ handleMenuClick }: MenuProps) => {
         <div onClick={handleMenuClick} className='cursor-pointer'>
           <MenuIcon />
         </div>
-        <div>Título</div>
+        <div>Dashboard</div>
       </div>
       <div className='flex gap-2 items-center'>
         <div className='cursor-pointer' onClick={handleLogout}>
